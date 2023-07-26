@@ -1,0 +1,142 @@
+[
+    {
+        "id": "5dc78f30b2a8e7f2",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1899229c3cb17e3b",
+        "type": "cocossd",
+        "z": "5dc78f30b2a8e7f2",
+        "name": "",
+        "x": 620,
+        "y": 200,
+        "wires": [
+            [
+                "22409a0694cfe84f",
+                "42c42a4bfcd7694b",
+                "b60985b9eff5e283"
+            ]
+        ]
+    },
+    {
+        "id": "22409a0694cfe84f",
+        "type": "image",
+        "z": "5dc78f30b2a8e7f2",
+        "name": "",
+        "width": 160,
+        "data": "annotatedInput",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": true,
+        "outputs": 1,
+        "x": 640,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ca2cf6a2ca223d47",
+        "type": "image",
+        "z": "5dc78f30b2a8e7f2",
+        "name": "",
+        "width": 160,
+        "data": "payload",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": true,
+        "outputs": 1,
+        "x": 400,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "42c42a4bfcd7694b",
+        "type": "debug",
+        "z": "5dc78f30b2a8e7f2",
+        "name": "result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 790,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "112cf7c58375b202",
+        "type": "ui_webcam",
+        "z": "5dc78f30b2a8e7f2",
+        "name": "",
+        "group": "357d373a.2d1478",
+        "order": 2,
+        "width": 15,
+        "height": 9,
+        "countdown": false,
+        "autoStart": true,
+        "hideCaptureButton": false,
+        "showImage": "2",
+        "mirror": true,
+        "format": "png",
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "1899229c3cb17e3b",
+                "ca2cf6a2ca223d47"
+            ]
+        ]
+    },
+    {
+        "id": "b60985b9eff5e283",
+        "type": "ui_text",
+        "z": "5dc78f30b2a8e7f2",
+        "group": "357d373a.2d1478",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 790,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "357d373a.2d1478",
+        "type": "ui_group",
+        "name": "Object recognition",
+        "tab": "40d8b907.a41218",
+        "order": 1,
+        "disp": true,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "40d8b907.a41218",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
